@@ -1,0 +1,40 @@
+javascript-learning-journey/
+│
+├── 01-basics/
+│   ├── variables.js
+│   ├── data-types.js
+│   └── console.js
+│
+├── 02-operators/
+│   ├── arithmetic.js
+│   ├── comparison.js
+│   └── logical.js
+│
+├── 03-strings/
+│   └── string-methods.js
+│
+├── 04-conditions/
+│   ├── if-else.js
+│   ├── switch.js
+│   └── ternary.js
+│
+├── 05-loops/
+│   ├── for.js
+│   ├── while.js
+│   └── do-while.js
+│
+├── 06-arrays/
+│
+├── 07-objects/
+│
+├── 08-functions/
+│
+├── 09-dom/
+│
+├── 10-events/
+│
+├── 11-debugging/
+│
+├── 12-mini-projects/
+│
+└── README.md
