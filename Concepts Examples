@@ -1,0 +1,746 @@
+*
+**
+***
+****
+
+for(let i = 1; i <= 4; i ++){
+    let row = "";
+    for(let j = 1; j <= i; j++)
+    {
+        row = row + "*";
+    }
+    console.log(row);
+}
+
+
+****
+****
+****
+****
+
+
+for (let i = 1; i <= 4; i++) {
+    let row = "";
+
+    for (let j = 1; j <= 4; j++) {
+        row = row + "*";
+    }
+
+    console.log(row);
+}
+// * * * *
+
+
+1
+12
+123
+1234
+12345
+
+for(let i = 1; i <= 5; i++){
+    let row = "";
+    for(let j = 1; j <= i; j++){
+        row = row + j;
+    }
+    console.log(row);
+}
+
+12345
+1234
+123
+12
+1
+
+for(let i = 5; i >=1; i--){
+    let row = "";
+    for(let j = 1; j <= i; j++){
+        row += j;
+    }
+    console.log(row);
+}
+
+*
+**
+***
+****
+*****
+
+for(let i = 1; i<=5; i++){
+    let row ="";
+    for(let j =1 ; j <= i; j++){
+        row += "*";
+    }
+    console.log(row);
+}
+
+// ====break======
+for(let i = 1; i <= 10; i++){
+    if(i === 6){
+        break;
+    }
+    console.log(i);
+}
+
+Output: 1 2 3 4 5
+At which value does the loop stop: i =6 ;
+In your own words, what does break do?
+Break stop the loop and come to outside of the loop
+
+for(let i = 1; i <= 10; i++){
+    console.log(i);
+
+    if(i === 4){
+        break;
+    }
+}
+
+Output: 1 2 3 4
+At which value does the loop stop: i = 4;
+Why is 4 printed: 4 is checking the if condation that=e it is true and break excuted, stop the loop
+
+for(let i = 1; i <= 3; i++){
+    
+    for(let j = 1; j <= 5; j++){
+        
+        if(j === 3){
+            break;
+        }
+        
+    }
+        console.log(i, j);
+}
+
+What happens when j = 3 means check the if condation and excute break and stop the loop
+Does break stop the inner loop or both loops: stop inner loop
+How many total times will console.log(i, j) execute : 1 1, 1 2,  2 1, 2 2,  3 1, 3 2,
+
+
+// =======continue ======
+
+for(let i = 1; i <= 6; i++){
+
+    if(i === 4){
+        continue;
+    }
+
+    console.log(i);
+}
+
+Output: 1 2 3 5 6
+Which value is skipped : 4
+Does continue stop the loop or allow the loop to continue?
+Allow the loop and continue, it is onabort;y skip cuurent iteration
+
+for(let i = 1; i <= 7; i++){
+
+    if(i === 3){
+        continue;
+    }
+
+    if(i === 6){
+        break;
+    }
+
+    console.log(i);
+}
+
+Output: 1 2 4 5
+Which value is skipped : 3
+Which value stops the loop : 6
+What is the difference between continue and break in this code?
+Continue: It is skip the current iteration and move to next one 
+Break: Stop the entire loop, because exsting one i = 6  condation true not goto next one it terminate entire loop
+
+// ======for of  Loop=======
+let numbers = [10, 20, 30, 40, 50];
+for(number of numbers){
+    console.log(number);
+}
+Output: 10 
+20
+30
+40
+50
+
+let fruits = ['Apple', 'Orange', 'Mango'];
+for(let i = 0; i <= fruits.length; i++){
+    console.log(fruits[i]);
+}
+Output: Apple
+Orange
+Mango
+
+
+let numbers = [10, 20, 30, 40];
+for(let x in numbers){
+    console.log(x);
+}
+Output: 0 1 2 3
+
+let numbers = [10, 20, 30, 40];
+for(let x of numbers){
+    console.log(x);
+}
+Output: 10 20 30 40
+Does x contain the index or the value : x contain the value becaause for of loop takes the CSSFontFeatureValuesRule, for in loop takes the index and value it is suport object
+
+
+let person = {
+    name : "srikanth",
+    location: "Hyderbad",
+    experience: 8
+}
+
+for(let key in person){
+    console.log(key);
+}
+for(let value in person){
+    console.log(person[value]);
+}
+
+
+let person = {
+    name: "Ravi",
+    age: 25,
+    city: "Hyderabad"
+};
+
+for(let key in person){
+    console.log(key, person[key]);
+}
+
+Output:  name, Ravi
+         age, 25
+        city, Hyderabad
+What does key contain?
+Key contain properties names like name, age, city.
+What does person[key] contain?
+person[key] means it takes the values of the object like Ravi, 25, Hyderabad
+Why is for...in suitable for this object?
+because we access easily keys and values so we use for in object
+// ============================================
+
+1. Print only Even numbers 1  to 10 ?
+
+for(let i = 1; i <= 10; i++){
+    if(i % 2 === 0){
+         console.log("Even number :", i);
+    }
+}
+
+2. Print only Odd numbers 1  to 10 ?
+
+for(let i = 1; i <=10; i++){
+    if(i % 2 !== 0){
+        console.log("Odd number :", i);
+    }
+}
+
+Write a program to calculate:
+
+1 + 2 + 3 + ... + 10
+
+let sum = 0;
+
+for(let i =1; i<= 10; i++){
+    sum = sum + i;
+}
+console.log("Sum of the digits:", sum);
+
+Next challenge: Sum of even numbers
+2 + 4 + 6 + 8 + 10 = 30
+
+let evensum = 0;
+for(let j = 1; j <= 10; j++){
+    if(j % 2 === 0){
+        evensum = evensum + j;
+    }
+}
+console.log("Sum of the even munbers:", evensum);
+// ============================================
+Now lets count how many even numbers exist from 1 to 10
+
+let sum = 0;
+for(i = 1; i <= 10; i++){
+    if(i % 2 === 0){
+       sum = sum + 1 
+    }
+}
+console.log("sum of the even number in the loop", sum);
+
+Count the odd numbers from 1 to 20.
+
+let count = 0;
+for(let i = 1; i <= 20; i++){
+    if(i % 2 !== 0){
+        count += 1;
+    }
+}
+console.log("Odd number count:", count);
+// ====================================
+Find the largest number
+let numbers = [12, 45, 7, 89, 34];
+let largest = numbers[0];
+for(let index = 0;  index < numbers.length; index++){
+    if( numbers[index] > largest ){
+        largest = numbers[index];
+    }
+}
+ console.log('large number ', largest);
+
+Find the smallest number
+let numbers = [12, 45, 7, 89, 34];
+let smallest = numbers[0];
+for(let i = 0; i < numbers.length; i++ ){
+    if(numbers[i] < smallest){
+        smallest = numbers[i]
+    }
+}
+ console.log('Small number ', smallest);
+// ==============================
+Find both largest AND smallest
+
+let numbers = [12, 45, 7, 89, 34];
+let small = numbers[0];
+let bigger = numbers[0];
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > bigger){
+        bigger = numbers[i];
+    }
+    if(numbers[i] < small){
+        small = numbers[i];
+    }
+}
+ console.log('large number ', bigger);
+ console.log('Small number ', small);
+// ==============================
+ Reverse an array
+ let numbers = [10, 20, 30, 40, 50];
+ for(let i= numbers.length -1; i >= 0; i--){
+    console.log(numbers[i]);
+ }
+
+ Find a number in an array
+ Write a program that searches for 40 in:
+
+ let numbers = [10, 20, 30, 40, 50];
+ let targetnumber = 40 ;
+ for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] === targetnumber){
+        console.log("Number is found");
+        break;
+    }
+    // else{
+    //     console.log("Number is not found");
+    // }
+ }
+
+ let numbers = [10, 20, 30, 40, 50];
+ let targetnumber = 30 ;
+ let found = false;
+ for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] === targetnumber){
+       found = true;
+       break;
+    }
+ }
+ if(found){
+    console.log("Number is found");
+ }
+ else{
+    console.log("Number is not found");
+}
+
+Count occurrences
+
+“How many times does the number appear?
+
+let numbers = [10, 20, 30, 20, 40, 20, 50];
+let targetNumber = 20;
+let count = 0;
+
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] === targetNumber){
+        count++;
+    }
+}
+console.log(`20 appears ${count} times`);
+
+Count even numbers:
+let numbers = [10, 15, 22, 31, 40, 55, 60];
+let count = 0;
+for(let i = 0; i< numbers.length; i++ ){
+    if(numbers[i] % 2 !== 0){
+        count++;
+    }
+}
+console.log(`Odd number appears ${count} times`);
+// =========================================
+Count how many numbers are greater than 50.
+
+let numbers = [10, 25, 60, 45, 80, 30, 90];
+let count = 0;
+let targetnumber = 50;
+for(let i =0; i< numbers.length; i++){
+    if(numbers[i] > targetnumber){
+        count++;
+    }
+}
+console.log(`${count} numbers are greater than ${targetnumber}`);
+
+Count numbers in a range: Count how many numbers are between 30 and 70.
+
+let numbers = [10, 25, 35, 45, 60, 75, 80];
+let count = 0;
+for(let i =0; i < numbers.length;i++){
+    if(numbers[i] > 30  && numbers[i] < 70){
+        count++;
+    }
+}
+console.log(`${count} numbers are between 30 and 70`);
+
+Find the sum of all numbers greater than 50.
+
+let numbers = [10, 25, 60, 45, 80, 30, 90];
+let sum = 0;
+for(let i =0; i < numbers.length; i++){
+    if(numbers[i] > 50 ){
+        sum = sum + numbers[i];
+    }
+}
+console.log(`${sum} : sum of all numbers greater than 50`);
+// ===================================
+
+Find the average:
+
+let numbers = [10, 20, 30, 40, 50];
+let total = 0;
+for(let i = 0; i < numbers.length; i++){
+    total =total + numbers[i];
+}
+console.log(total);
+let avg = total / numbers.length;
+console.log(avg);
+
+Find the largest number
+let numbers = [25, 10, 75, 40, 60];
+let large = numbers[0];
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > large){
+        large = numbers[i];
+    }
+}
+console.log("Largest number", large);
+
+Find both the largest AND smallest number in the same loop.
+let numbers = [25, 10, 75, 40, 60, 5, 90];
+let small = numbers[0];
+let large = numbers[0];
+for(let i =0; i < numbers.length; i++){
+    if(numbers[i] < small ){
+        small = numbers[i]
+    }
+    if(numbers[i] > large){
+        large = numbers[i]
+    }
+}
+
+console.log("Largest number", large);
+console.log("Smallest number", small);
+
+Find the second largest number.
+
+let numbers = [25, 10, 75, 40, 60, 5, 90];
+let large = numbers[0]; //25
+let secondLarge = numbers[0]; //25
+for(let i = 0; i < numbers.length; i++){
+     if(numbers[i] > large ){ // 25 10 75 40 90
+        secondLarge = large; // 25
+        large = numbers[i]; // 75
+     }
+  else if(numbers[i] > secondLarge ){ // 25 40 60
+        secondLarge = numbers[i]; // 40 60
+    }
+       
+}
+console.log("Second large", secondLarge);
+
+Find the second largest number.
+let numbers = [50, 20, 80, 10, 70, 90, 60];
+let lg = numbers[0];
+let slg = numbers[0];
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > lg){
+        slg = lg;
+        lg = numbers[i];
+    }
+}
+console.log("First large", lg);
+console.log("Second large", slg);
+
+Find Second Smallest number
+
+let numbers = [50, 20, 80, 10, 70, 90, 60];
+let small = numbers[0];
+let secondSmall = numbers[0];
+
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] < small){ // 20 10
+        secondSmall = small; // 50  10
+        small = numbers[i]; // 20 10
+    }
+    else if(numbers[i] < secondSmall){ // 20 10
+        secondSmall = numbers[i];
+    }
+}
+console.log("First small", small);
+console.log("Second small", secondSmall);
+
+Reverse an array
+let numbers = [10, 20, 30, 40, 50];
+
+for(let i = numbers.length -1; i >= 0; i--){
+    console.log(numbers[i]);
+}
+
+Find the position (index) of a number 40
+let numbers = [10, 20, 30, 40, 50];
+let targetNumber = 40;
+for(let i =0 ; i < numbers.length; i++){
+    if(numbers[i] === targetNumber){
+        console.log("Index =", i);
+    }
+}
+
+Find all indexes? Print every index where 20 appears.
+let numbers = [10, 20, 30, 20, 40, 20, 50];
+
+let targetNumber = 20;
+
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] === targetNumber){
+        console.log(`index 20 appears: ${i}`);
+    }
+      console.log(`index of ${numbers[i]}: ${i}`);
+}
+
+
+Find how many times the target appears AND print all its indexes.
+
+let numbers = [10, 20, 30, 20, 40, 20, 50];
+
+let targetNumber = 20;
+let count = 0 ;
+
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] === targetNumber){
+        console.log(`index of ${numbers[i]}: ${i}`);
+        count++
+    }
+}
+console.log(`20 appears ${count}`);
+
+Find the first occurrence
+let numbers = [10, 20, 30, 20, 40, 20, 50];
+
+let targetNumber = 20;
+
+for(let i =0; i< numbers.length; i++){
+    if(numbers[i] === targetNumber){
+        console.log(`First index of ${numbers[i]}: ${i}`);
+        break
+    }
+}
+
+Find the last occurrence
+let numbers = [10, 20, 30, 20, 40, 20, 50];
+
+let targetNumber = 20;
+let lastIndex = -1;
+
+for(let i = numbers.length - 1; i >= 0; i--){
+    if(numbers[i] === targetNumber){
+        lastIndex = i;
+        break;
+    }
+}
+
+console.log(`Last index of ${targetNumber}: ${lastIndex}`);
+
+Reverse an array into a NEW array
+
+let numbers = [5, 10, 15, 20, 25, 30];
+let reversed = [];
+
+for(let i = numbers.length -1 ; i >= 0; i--){
+    reversed.push(numbers[i]);
+}
+ console.log(reversed);
+
+Reverse only EVEN numbers
+let numbers = [10, 15, 20, 25, 30, 35, 40];
+let reversedEven = [];
+
+for(let i = numbers.length - 1; i >= 0; i--){
+    if(numbers[i] % 2 === 0){
+        reversedEven.push(numbers[i]);
+    }
+}
+
+ console.log(reversedEven);
+
+ Create a new array containing only numbers greater than 15, but in reverse order.
+ let numbers = [12, 5, 8, 21, 30, 17, 40];
+ let targetNumber = 15;
+let result = [];
+for(let i = numbers.length - 1; i >= 0; i--){
+    if(numbers[i] > targetNumber ){
+        result.push(numbers[i]);
+    }
+}
+ console.log(result);
+
+
+ Find numbers greater than 20 and calculate their sum.
+ Traverse the array from right to left.
+
+ let numbers = [10, 25, 30, 15, 40, 5, 50];
+let targetNumber = 20;
+let sum = 0;
+let result = [];
+
+for(let i = numbers.length - 1; i >= 0; i--){
+    if(numbers[i] > targetNumber){
+        result.push(numbers[i]);
+        sum = sum + numbers[i];
+    }
+}
+console.log("Numbers: "+ result);
+console.log(`Sum: ${sum}`);
+// =============================
+
+Traverse from right to left.
+Find numbers greater than 20 and calculate:
+
+let numbers = [12, 25, 8, 40, 17, 30, 5, 50];
+let targetNumber = 20;
+
+let sum = 0;
+let count = 0;
+let result = [];
+
+for(let i = numbers.length - 1; i >= 0; i--){
+    if(numbers[i] > targetNumber){
+        result.push(numbers[i]);
+        sum = sum + numbers[i];
+        count++
+    }
+}
+console.log(`Numbers greater than  ${targetNumber}: ${result}`);
+console.log(`Count: ${count}`);
+console.log(`Sum: ${sum}`);
+
+Find the largest matching number? Find the largest number greater than 20.
+
+let numbers = [12, 25, 8, 40, 17, 30, 5, 50];
+let targetNumber = 20;
+let largest = 0;
+
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > targetNumber){ // 25 40 30 50
+        if(numbers[i] > largest){  // 25 40 50
+            largest = numbers[i];  // 25 40 50
+        }
+    }
+}
+console.log(`Largest number greater than ${targetNumber}: ${largest}`);
+
+Largest EVEN number
+Find the largest even number.
+
+let numbers = [15, 22, 8, 41, 36, 19, 50, 27];
+let largestEven = 0;
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] % 2 === 0){ // 22 8 36 50
+        if(numbers[i] > largestEven){ // 22 36 50
+            largestEven = numbers[i]; // 22 36 50
+        }
+    }
+}
+console.log(`Largest even number: ${largestEven}`);
+
+// ============================================
+
+Write a do...while loop that prints: 1 2 3 4 5
+
+let i =1;
+do{
+    console.log(i);
+    i++;
+}while( i <= 5)
+
+Tell me the output and explain why.
+
+let i = 10;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+Output: 10
+i = 10 so i++ 11 then 11 <= 5 condation is false, so stop the while condation, so befoere excute the while do condation print the value of 10
+// =========================================================
+
+What is the difference between a while loop and a do...while loop?
+A while loop checks the condition first, so the loop may execute zero times if the condition is false. 
+A do...while loop executes the code first and checks the condition afterward, so it always executes at least once.
+
+What is the difference between: for and while?
+Both for and while loops are used to repeat code.
+A for loop puts initialization, condition, and update together in the loop statement, while 
+A while loop mainly contains the condition, with initialization and update usually written separately.
+
+What is the difference between break and continue in JavaScript?
+Break : stop the loop and terminate the excuteing loop
+Continue: stop or skip the current iteration and move to next iteration
+
+What is an infinite loop? And give me one example of how an infinite loop can happen in JavaScript?
+An infinite loop is a loop that never terminates because its condition always remains true or the loop variable is not updated correctly.
+
+Ex: let i = 1;
+while( i < 10){
+    console.log(i)
+}
+
+What is a nested loop? And explain what happens when an inner loop is inside an outer loop?
+A loop containing another loop is called a nested loop.
+A nested loop is a loop inside another loop. For every one iteration of the outer loop, the inner loop completes all of its iterations.
+
+What is the difference between: for...in, for...of
+for...in iterates over the keys of an object and indexes of an array, while for...of iterates directly over the values of an iterable such as an array or string.
+
+let numbers = [10, 20, 30, 40, 50];
+
+for(let i = 0; i <= numbers.length; i++){
+    console.log(numbers[i]);
+}
+What is wrong with this loop?
+No worng is there.
+What will be the output, and why?
+10 20 30 40 50
+Array length tells you how many items there are. Index tells you where they are.
+numbers[i] accesses the value stored at index i
+
+
+
+
+
+
+
+
+
+
+
+
+
